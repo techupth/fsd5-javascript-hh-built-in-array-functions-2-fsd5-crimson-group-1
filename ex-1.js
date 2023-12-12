@@ -374,3 +374,10 @@ const bills = [
 ];
 
 // Start coding here
+
+function totalPurchase(purchase) {
+  const sum = purchase.reduce((acc, curr) => acc + curr.total, 0);
+  return sum;
+}
+
+console.log(`Total bill transaction is ${totalPurchase(bills)}`);

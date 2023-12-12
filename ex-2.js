@@ -375,4 +375,11 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+const newBills = [];
+
+function onlyMember(purchase) {
+  return purchase.filter((purchase) => purchase.member !== null);
+}
+newBills.push(onlyMember(bills));
+
+console.log(onlyMember(bills));
