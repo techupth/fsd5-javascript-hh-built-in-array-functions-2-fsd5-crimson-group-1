@@ -374,4 +374,20 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+const totalMembers = memberNames(bills);
+
+function memberNames(purchases) {
+  let name = purchases
+    .map((purchase) => {
+      if (purchase.member !== null) {
+        return purchase.member.name;
+      }
+    })
+    .filter((item) => item);
+  //ตัดชื่อซ้ำ
+  name = Array.from(new Set(name));
+  return name.length;
+  // return name;
+}
+
+console.log(`Unique Members Count: ${totalMembers}`);
