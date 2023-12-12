@@ -374,4 +374,16 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+const billMembers = memberNames(bills);
+
+function memberNames(purchases) {
+  return purchases
+    .map((purchase) => {
+      if (purchase.member !== null) {
+        return purchase.member.name;
+      }
+    })
+    .filter((item) => item);
+}
+
+console.log(billMembers);
