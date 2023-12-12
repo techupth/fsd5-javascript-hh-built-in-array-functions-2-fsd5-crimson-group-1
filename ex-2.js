@@ -373,6 +373,12 @@ const bills = [
   },
 ];
 
-// Start coding here
+function getOnlyMember(bills) {
+  if (bills.member !== null) {
+    newBills.push(bills);
+  }
+}
+const newBills = [];
 
-const newBills;
+bills.filter(getOnlyMember);
+console.log(newBills);

@@ -373,4 +373,11 @@ const bills = [
   },
 ];
 
-// Start coding here
+function getTotalBills(accumulator, currentValue) {
+  return accumulator + currentValue.total;
+}
+
+const totalBills = `Total bill transaction is ${bills
+  .reduce(getTotalBills, 0)
+  .toLocaleString()}`;
+console.log(totalBills);

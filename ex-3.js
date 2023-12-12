@@ -373,5 +373,13 @@ const bills = [
   },
 ];
 
-// Start coding here
-const billMembers;
+const billMembers = [];
+function getOnlyName(bills) {
+  if (bills.member !== null) {
+    billMembers.push(bills.member.name);
+  }
+  return billMembers;
+}
+
+bills.filter(getOnlyName);
+console.log(billMembers);
