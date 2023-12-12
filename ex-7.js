@@ -1,10 +1,11 @@
 function isPalindrome(string) {
   // Start coding here
-
   string = string.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
 
   for (let i = 0; i < string.length / 2; i++) {
-    return string[i] !== string[string.length - 1 - i] ? false : true;
+    if (string[i] !== string[string.length - 1 - i]) {
+      return false;
+    }
   }
 
   return true;
