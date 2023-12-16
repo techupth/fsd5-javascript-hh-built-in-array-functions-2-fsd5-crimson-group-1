@@ -374,3 +374,8 @@ const bills = [
 ];
 
 // Start coding here
+const totalCount = bills.reduce((acc, curr) => {
+  return acc + curr.total;
+}, 0);
+
+console.log("Total bill transaction is " + totalCount.toLocaleString());
